@@ -1,0 +1,68 @@
+/* FacultyLogin.css */
+
+.faculty-login-container {
+    min-height: 100vh;
+    background: linear-gradient(to top right, #d1fae5, #bfdbfe);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .faculty-login-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .faculty-login-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .faculty-login-error {
+    color: #dc2626;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .faculty-login-form .form-field {
+    margin-bottom: 16px;
+  }
+  
+  .faculty-login-form label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #333;
+  }
+  
+  .faculty-login-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  
+  .faculty-login-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #2563eb;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .faculty-login-btn:hover {
+    background-color: #1d4ed8;
+  }
+  

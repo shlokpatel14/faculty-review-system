@@ -25,7 +25,7 @@ class StudentController extends Controller
             'password' => 'required|min:6',
             'mobile_no' => 'required|unique:students',
             'branch' => 'required|string',
-//            'semester' => 'required|string',Changed department_id to required
+            'semester' => 'required|string',//Changed department_id to required
             'department_id' => 'required|exists:departments,department_id'
         ]);
         if($validator->fails()) 
@@ -58,4 +58,25 @@ class StudentController extends Controller
         if (!$student) return response()->json(['message' => 'Student not found'], 404);
         return response()->json($student, 200);
     }
+    public function login(Request $request)
+{
+    $student = Student::where('email', $request->email)->first();
+    if (!$student || !Hash::check($request->password, $student->password)) {
+        return response()->json(['message' => 'Invalid credentials'], 401);
+    }
+
+    $token = $student->createToken('student-token')->plainTextToken;
+
+    return response()->json([
+        'token' => $token,
+        'student' => $student,
+    ]);
+    
+}
+public function getStudentsByDepartment($department_id)
+{
+    $students = Student::where('department_id', $department_id)->get();
+    return response()->json($students);
+}
+
 }

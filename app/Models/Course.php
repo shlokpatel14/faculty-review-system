@@ -13,7 +13,8 @@ class Course extends Model
         'course_name',
         'department_id',
         'semester',
-        'faculty_id'    
+        'faculty_id',
+        'academic_year',    
     ];
     public $timestamps = false;
     public function department() {

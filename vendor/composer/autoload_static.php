@@ -523,6 +523,7 @@ class ComposerStaticInit88970a0117c062eed55fa8728fc43833
     public static $classMap = array (
         'App\\Http\\Controllers\\Api\\AuthController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/AuthController.php',
         'App\\Http\\Controllers\\Api\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/Controller.php',
+        'App\\Http\\Controllers\\Api\\CourseController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/CourseController.php',
         'App\\Http\\Controllers\\Api\\DepartmentController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/DepartmentController.php',
         'App\\Http\\Controllers\\Api\\FacultyController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/FacultyController.php',
         'App\\Http\\Controllers\\Api\\HODController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/HODController.php',
@@ -534,6 +535,7 @@ class ComposerStaticInit88970a0117c062eed55fa8728fc43833
         'App\\Http\\Resources\\HODResource' => __DIR__ . '/../..' . '/app/Http/Resources/HODResource.php',
         'App\\Http\\Resources\\ReviewResource' => __DIR__ . '/../..' . '/app/Http/Resources/ReviewResource.php',
         'App\\Http\\Resources\\StudentResource' => __DIR__ . '/../..' . '/app/Http/Resources/StudentResource.php',
+        'App\\Models\\Course' => __DIR__ . '/../..' . '/app/Models/Course.php',
         'App\\Models\\Department' => __DIR__ . '/../..' . '/app/Models/Department.php',
         'App\\Models\\Faculty' => __DIR__ . '/../..' . '/app/Models/Faculty.php',
         'App\\Models\\HOD' => __DIR__ . '/../..' . '/app/Models/HOD.php',

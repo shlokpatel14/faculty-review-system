@@ -53,4 +53,15 @@ class FacultyController extends Controller
         if (!$faculty) return response()->json(['message' => 'Faculty not found'], 404);
         return response()->json($faculty, 200);
     }
+    public function getFacultyByDepartment($department_id)
+{
+    $faculty = Faculty::where('department_id', $department_id)->get();
+
+    if ($faculty->isEmpty()) {
+        return response()->json(['message' => 'No faculty found for this department.'], 404);
+    }
+
+    return response()->json($faculty);
+}
+
 }

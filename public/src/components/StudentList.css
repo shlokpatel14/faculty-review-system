@@ -1,0 +1,55 @@
+.student-list-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
+  }
+  
+  .student-list-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+    color: #333;
+  }
+  
+  .student-list {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding: 0;
+    display:grid;
+  }
+  
+  .student-list li {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s;
+  }
+  
+  .student-list li:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .student-list p {
+    margin: 6px 0;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .student-list p strong {
+    color: #222;
+  }
+  
+  .error {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  

@@ -4,16 +4,17 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class Student extends Authenticatable
 {
-    use HasFactory;
+    use HasFactory, HasApiTokens;
 
     protected $table = 'students';
     protected $primaryKey = 'enrollment';
     public $timestamps = true;
-    protected $fillable = ['enrollment', 'name', 'email', 'password', 'mobile_no', 'branch','department_id'];
+    protected $fillable = ['enrollment', 'name', 'email', 'password', 'mobile_no', 'branch','department_id','semester'];
 
     protected $hidden = ['password', 'remember_token'];
 

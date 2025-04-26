@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'App\\Http\\Controllers\\Api\\AuthController' => $baseDir . '/app/Http/Controllers/Api/AuthController.php',
     'App\\Http\\Controllers\\Api\\Controller' => $baseDir . '/app/Http/Controllers/Api/Controller.php',
+    'App\\Http\\Controllers\\Api\\CourseController' => $baseDir . '/app/Http/Controllers/Api/CourseController.php',
     'App\\Http\\Controllers\\Api\\DepartmentController' => $baseDir . '/app/Http/Controllers/Api/DepartmentController.php',
     'App\\Http\\Controllers\\Api\\FacultyController' => $baseDir . '/app/Http/Controllers/Api/FacultyController.php',
     'App\\Http\\Controllers\\Api\\HODController' => $baseDir . '/app/Http/Controllers/Api/HODController.php',
@@ -19,6 +20,7 @@ return array(
     'App\\Http\\Resources\\HODResource' => $baseDir . '/app/Http/Resources/HODResource.php',
     'App\\Http\\Resources\\ReviewResource' => $baseDir . '/app/Http/Resources/ReviewResource.php',
     'App\\Http\\Resources\\StudentResource' => $baseDir . '/app/Http/Resources/StudentResource.php',
+    'App\\Models\\Course' => $baseDir . '/app/Models/Course.php',
     'App\\Models\\Department' => $baseDir . '/app/Models/Department.php',
     'App\\Models\\Faculty' => $baseDir . '/app/Models/Faculty.php',
     'App\\Models\\HOD' => $baseDir . '/app/Models/HOD.php',

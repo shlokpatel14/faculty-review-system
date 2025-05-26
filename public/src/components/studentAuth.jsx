@@ -47,24 +47,33 @@ const StudentAuth = () => {
 
   const handleRegister = async (e) => {
     e.preventDefault();
-    if (!validateRegister()) return;
-
-    try {
-      const res = await axios.post('http://localhost:8000/api/auth/student/register', form, {
-        withCredentials: true
-      });
-      setSuccess("Registered successfully. You can now log in.");
-      setForm({
-        enrollment: '', name: '', email: '', password: '',
-        mobile_no: '', semester: '', department_id: '', branch: ''
-      });
-      setError('');
-      navigate('/student/login');
-    } catch (err) {
-      console.log(err.response?.data);
-      setError(err.response?.data?.message || "Registration failed.");
+    if (validateRegister()) {
+      try {
+        const res = await axios.post('http://localhost:8000/api/auth/student/register', form, {
+          withCredentials: true
+        });
+  
+        // Only proceed if status is 201 or 200
+        if (res.status === 201 || res.status === 200) {
+          setForm({
+            enrollment: '', name: '', email: '', password: '',
+            mobile_no: '', semester: '', department_id: '', branch: ''
+          });
+          setError('');
+          setSuccess("Registered successfully. You can now log in.");
+          navigate('/student/login');
+        } else {
+          // If response is not 200/201, treat as error
+          setError(res.data.message || "Registration failed.");
+        }
+      } catch (err) {
+        console.log(err.response?.data);
+        setError(err.response?.data?.message || "Registration failed.");
+        setSuccess(''); // Clear any previous success message
+      }
     }
   };
+  
 
   const handleLogin = async (e) => {
     e.preventDefault();

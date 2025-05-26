@@ -22,7 +22,7 @@ class CourseController extends Controller
             'department_id' => 'required|exists:departments,department_id',
             'semester' => 'required|integer',
             'faculty_id' => 'required|exists:faculty,faculty_id',
-            'academic_year' => 'nullable|integer',
+
         ]);
         if ($validator->fails()) {  
             return response()->json([
@@ -37,7 +37,7 @@ class CourseController extends Controller
             'department_id' => $request->department_id,
             'semester' => $request->semester,
             'faculty_id' => $request->faculty_id,
-            'academic_year' => $request->academic_year,
+
         ]);
         return response()->json($course, 201);
     }
@@ -56,7 +56,7 @@ public function getCoursesForStudent(Request $request)
     $validator = Validator::make($request->all(), [
         'department_id' => 'required|exists:departments,department_id',
         'semester' => 'required|integer',
-        'academic_year' => 'nullable|integer',
+
     ]);
 
     if ($validator->fails()) {

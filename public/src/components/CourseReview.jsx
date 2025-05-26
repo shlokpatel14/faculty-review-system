@@ -26,7 +26,7 @@ const CourseReviews = () => {
 
   return (
     <div className="course-reviews-container">
-      <h2>Review Submissions for Course</h2>
+      <h2>Review Submissions for {course_id}</h2>
 
       <div style={{ textAlign: 'center', marginBottom: '25px' }}>
         <input

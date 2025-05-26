@@ -14,7 +14,7 @@ class Course extends Model
         'department_id',
         'semester',
         'faculty_id',
-        'academic_year',    
+      
     ];
     public $timestamps = false;
     public function department() {

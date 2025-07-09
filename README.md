@@ -104,7 +104,8 @@ Route::prefix('student')->group(function () {
 ---
 
 ## 📸 Screenshots
-_Add screenshots here if needed._
+![Screenshot 2025-07-09 183209](https://github.com/user-attachments/assets/a488f7b6-2913-44b6-b6fd-438cb1fe0355)
+
 
 ---
 
